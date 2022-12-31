@@ -145,11 +145,27 @@ exports.deleteCartItem = async(  userId, _id)=>{
   console.log(userId)
   try{
 
+
+    const cartfounded = await cart.findOne({userId})
+    console.log("tydcjvjcytcgj",cartfounded)
+
+    if(cartfounded === null){
+
+      return {
+        success: false,
+      code: 404,
+      error: 'No cart Found!!!'
+    }
+
+    }
+
+                             const prelength = cartfounded.products.length
+
                               const minresult = await cart.findOneAndUpdate(userId,  { $pull:{ products : {product: _id} }} )
 
                               const crctwayresult = minresult.products.length
                               console.log("tea", crctwayresult)
-if (crctwayresult > 0){
+if (crctwayresult < prelength){
   return {
     success: true,
     code: 200,
