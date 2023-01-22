@@ -19,6 +19,7 @@ router.get('/get', Auth, async (req, res)=>{
     try {
         const result = await HS.find({user:req.user.id})
         res.status(200).send(result)
+        console.log("hdkjhjh", result)
     } catch (e) {
         res.status(500).send(e)
     }
