@@ -127,8 +127,8 @@ exports.getSingleUserCart = async(userId) =>{
         } else {
             return {
                 success: false,
-              code: 404,
-              error: 'Record Not Found!!!'
+              code: 201,
+              error: 'No Record Found!!!'
             }
         }
 
