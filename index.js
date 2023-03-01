@@ -7,8 +7,8 @@ const path = require('path')
 const bodyParser = require("body-parser")
 
 app.use(bodyParser.urlencoded({ extended: true }));
-// const router = require('router')
-// const twilio = require("twilio")
+
+
 // router.route('/verifyOtp').post(verifyOtpAndSaveUser);
 const userRoute = require('./routes/user')
 const addressRoute = require('./routes/address')
