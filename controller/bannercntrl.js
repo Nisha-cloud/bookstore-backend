@@ -1,5 +1,5 @@
 const Banner = require('../models/Banner')
-// var ObjectId = require('mongodb').ObjectId
+
 
 
 
@@ -101,5 +101,3 @@ catch (e){
 
 
 
-// return res.status(201).json({banner:newBanner})
-// return res.status(400).json({message:'Something went wrong'})
